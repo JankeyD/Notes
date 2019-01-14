@@ -13,6 +13,17 @@ class NotesViewCotroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let service = NotesService()
+        let _ = service.getNotes { response in
+            if case .success(let noteResponse) = response {
+                let notes = noteResponse?.notes
+            }
+            
+            if case .failure(let error) = response {
+                print("")
+            }
+        }
+        
     }
 
 
