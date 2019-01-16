@@ -6,10 +6,18 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
+import Foundation
+
 struct NoteResponse: Decodable, JSONConvertible {
-    enum CodingKeys: String, CodingKey {
-        case notes
-    }
     
     let notes: [Note]?
+    
+    init?(JSON: Data) {
+        do {
+            notes = try JSONDecoder().decode([Note].self, from: JSON)
+        } catch let error {
+            print(error)
+            return nil
+        }
+    }
 }

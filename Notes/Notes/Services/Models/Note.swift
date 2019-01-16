@@ -12,6 +12,6 @@ struct Note: Decodable, JSONConvertible {
         case title
     }
     
-    let id: String?
+    let id: Int?
     let title: String?
 }

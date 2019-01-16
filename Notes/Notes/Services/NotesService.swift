@@ -19,7 +19,7 @@ class NotesService: Service, NotesServiceType {
         var url: URL {
             switch self {
             case .noteList:
-                return URL(appendedWith: "notes/")
+                return URL(appendedWith: "notes")
             }
         }
     }
