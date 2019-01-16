@@ -6,11 +6,10 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-import RxSwift
+import RxCocoa
 
 class NotesViewModel: ViewModel {
-    
-    let notes: Variable<[Note]> = Variable([])
+    let notes = BehaviorRelay<[Note]>(value: [])
     
     /// All dependencies which have to be fulfilled to be able to operate.
     typealias Dependencies = HasNotesService
@@ -34,12 +33,12 @@ class NotesViewModel: ViewModel {
         let _ = _notesService.getNotes { response in
             if case .success(let noteResponse) = response {
                 if let notes = noteResponse?.notes {
-                    self.notes.value = notes
+                    self.notes.accept(notes)
                 }
             }
             
             if case .failure(let error) = response {
-                print("")
+                print(error)
             }
         }
     }

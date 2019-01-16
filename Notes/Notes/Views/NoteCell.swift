@@ -9,5 +9,13 @@
 import UIKit
 
 class NoteCell: UITableViewCell {
+    static let identifier = "NoteCell"
     
+    @IBOutlet private var title: UILabel!
+    @IBOutlet private var subTitle: UILabel!
+    
+    func configure(withNote note: Note) {
+        title.text = note.title
+        subTitle.text = note.title
+    }
 }

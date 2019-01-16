@@ -22,6 +22,17 @@ final class AppCoordinator: Coordinator {
         vc.viewModel = NotesViewModel(dependencies: ServiceDependencyContainer())
         navigationController.pushViewController(vc, animated: false)
     }
+    
+    func createNote() {
+        let vc = NoteViewController.instantiate()
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showNoteDetail(with note: Note) {
+        let vc = NoteViewController.instantiate()
+        vc.viewModel = NoteViewModel(note: note)
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 
 
