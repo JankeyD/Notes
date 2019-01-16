@@ -11,7 +11,7 @@
 		032DAA9921ED2D8B00CC4F62 /* NoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9821ED2D8B00CC4F62 /* NoteResponse.swift */; };
 		032DAA9B21ED308C00CC4F62 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9A21ED308C00CC4F62 /* Endpoint.swift */; };
 		033AE26721E8AC2E001C7E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE26621E8AC2E001C7E9E /* AppDelegate.swift */; };
-		033AE26921E8AC2E001C7E9E /* NotesViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE26821E8AC2E001C7E9E /* NotesViewCotroller.swift */; };
+		033AE26921E8AC2E001C7E9E /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE26821E8AC2E001C7E9E /* NotesViewController.swift */; };
 		033AE26C21E8AC2E001C7E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033AE26A21E8AC2E001C7E9E /* Main.storyboard */; };
 		033AE26E21E8AC2F001C7E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033AE26D21E8AC2F001C7E9E /* Assets.xcassets */; };
 		033AE27121E8AC2F001C7E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033AE26F21E8AC2F001C7E9E /* LaunchScreen.storyboard */; };
@@ -25,6 +25,13 @@
 		033E9C0421EA8804006162CE /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E9C0321EA8804006162CE /* ServiceResult.swift */; };
 		033E9C0721EA8EB2006162CE /* JSONConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E9C0621EA8EB2006162CE /* JSONConvertible.swift */; };
 		033E9C0A21EA94CA006162CE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E9C0921EA94CA006162CE /* Note.swift */; };
+		036A682721EF1CFC009C9F17 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A682621EF1CFC009C9F17 /* Coordinator.swift */; };
+		036A682921EF1E26009C9F17 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A682821EF1E26009C9F17 /* AppCoordinator.swift */; };
+		036A682B21EF1F51009C9F17 /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A682A21EF1F51009C9F17 /* StoryBoarded.swift */; };
+		036A682E21EF29A5009C9F17 /* ServiceDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A682D21EF29A5009C9F17 /* ServiceDependencyContainer.swift */; };
+		036A683121EF2AAE009C9F17 /* HasNotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A683021EF2AAE009C9F17 /* HasNotesService.swift */; };
+		03B74C0721EE77A4004B63D4 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B74C0621EE77A4004B63D4 /* NotesViewModel.swift */; };
+		03B74C0921EE8141004B63D4 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B74C0821EE8141004B63D4 /* NoteCell.swift */; };
 		03C2CA5621EBD99B00E8F9FA /* RequestProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CA5521EBD99B00E8F9FA /* RequestProcedure.swift */; };
 		C2E8FBF891A016FB8A35FA2E /* Pods_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97356ACF08FA0DA491647F48 /* Pods_Notes.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +52,7 @@
 		032DAA9A21ED308C00CC4F62 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		033AE26321E8AC2E001C7E9E /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033AE26621E8AC2E001C7E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		033AE26821E8AC2E001C7E9E /* NotesViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewCotroller.swift; sourceTree = "<group>"; };
+		033AE26821E8AC2E001C7E9E /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		033AE26B21E8AC2E001C7E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		033AE26D21E8AC2F001C7E9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		033AE27021E8AC2F001C7E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +71,13 @@
 		033E9C0321EA8804006162CE /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
 		033E9C0621EA8EB2006162CE /* JSONConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConvertible.swift; sourceTree = "<group>"; };
 		033E9C0921EA94CA006162CE /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		036A682621EF1CFC009C9F17 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		036A682821EF1E26009C9F17 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		036A682A21EF1F51009C9F17 /* StoryBoarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
+		036A682D21EF29A5009C9F17 /* ServiceDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDependencyContainer.swift; sourceTree = "<group>"; };
+		036A683021EF2AAE009C9F17 /* HasNotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasNotesService.swift; sourceTree = "<group>"; };
+		03B74C0621EE77A4004B63D4 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		03B74C0821EE8141004B63D4 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		03C2CA5521EBD99B00E8F9FA /* RequestProcedure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProcedure.swift; sourceTree = "<group>"; };
 		97356ACF08FA0DA491647F48 /* Pods_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEFCB49C9FC1D4DDBF0E4D9 /* Pods-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Notes/Pods-Notes.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,14 +128,15 @@
 		033AE26521E8AC2E001C7E9E /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				033E9BCE21E94A55006162CE /* Base */,
+				033AE26621E8AC2E001C7E9E /* AppDelegate.swift */,
+				036A682821EF1E26009C9F17 /* AppCoordinator.swift */,
+				033AE26821E8AC2E001C7E9E /* NotesViewController.swift */,
+				033E9BCE21E94A55006162CE /* Core */,
 				033E9BD721EA77BC006162CE /* Services */,
 				033AE28921E8AE22001C7E9E /* View Models */,
 				033AE28821E8ADCE001C7E9E /* Extensions */,
 				033AE28621E8AD34001C7E9E /* Models */,
 				033AE28721E8AD34001C7E9E /* Views */,
-				033AE26621E8AC2E001C7E9E /* AppDelegate.swift */,
-				033AE26821E8AC2E001C7E9E /* NotesViewCotroller.swift */,
 				033AE26A21E8AC2E001C7E9E /* Main.storyboard */,
 				033AE26D21E8AC2F001C7E9E /* Assets.xcassets */,
 				033AE26F21E8AC2F001C7E9E /* LaunchScreen.storyboard */,
@@ -149,6 +164,7 @@
 		033AE28721E8AD34001C7E9E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03B74C0821EE8141004B63D4 /* NoteCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,19 +179,21 @@
 		033AE28921E8AE22001C7E9E /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				03B74C0621EE77A4004B63D4 /* NotesViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		033E9BCE21E94A55006162CE /* Base */ = {
+		033E9BCE21E94A55006162CE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				036A682C21EF297C009C9F17 /* Dependency Management */,
 				033E9C0521EA8E8B006162CE /* Protocols */,
 				033E9C0221EA87B3006162CE /* Service */,
 				033E9BCF21E94B17006162CE /* Dynamic.swift */,
 				033E9BD121E94F64006162CE /* ViewModel.swift */,
 			);
-			path = Base;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		033E9BD721EA77BC006162CE /* Services */ = {
@@ -213,6 +231,8 @@
 			children = (
 				033E9C0621EA8EB2006162CE /* JSONConvertible.swift */,
 				032DAA9A21ED308C00CC4F62 /* Endpoint.swift */,
+				036A682621EF1CFC009C9F17 /* Coordinator.swift */,
+				036A682A21EF1F51009C9F17 /* StoryBoarded.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -224,6 +244,23 @@
 				032DAA9821ED2D8B00CC4F62 /* NoteResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		036A682C21EF297C009C9F17 /* Dependency Management */ = {
+			isa = PBXGroup;
+			children = (
+				036A682F21EF2A8D009C9F17 /* Protocols */,
+				036A682D21EF29A5009C9F17 /* ServiceDependencyContainer.swift */,
+			);
+			path = "Dependency Management";
+			sourceTree = "<group>";
+		};
+		036A682F21EF2A8D009C9F17 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				036A683021EF2AAE009C9F17 /* HasNotesService.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		57A070F45C70685FC509B7BF /* Pods */ = {
@@ -369,14 +406,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Notes/Pods-Notes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ProcedureKit/ProcedureKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProcedureKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -408,15 +449,22 @@
 				033E9BDB21EA79EB006162CE /* NotesService.swift in Sources */,
 				032DAA9721ED1B8900CC4F62 /* ErrorType.swift in Sources */,
 				033E9BD621EA6533006162CE /* ServiceLocator.swift in Sources */,
+				03B74C0921EE8141004B63D4 /* NoteCell.swift in Sources */,
+				036A683121EF2AAE009C9F17 /* HasNotesService.swift in Sources */,
 				033E9BD021E94B17006162CE /* Dynamic.swift in Sources */,
+				03B74C0721EE77A4004B63D4 /* NotesViewModel.swift in Sources */,
 				032DAA9B21ED308C00CC4F62 /* Endpoint.swift in Sources */,
 				03C2CA5621EBD99B00E8F9FA /* RequestProcedure.swift in Sources */,
-				033AE26921E8AC2E001C7E9E /* NotesViewCotroller.swift in Sources */,
+				036A682721EF1CFC009C9F17 /* Coordinator.swift in Sources */,
+				033AE26921E8AC2E001C7E9E /* NotesViewController.swift in Sources */,
+				036A682E21EF29A5009C9F17 /* ServiceDependencyContainer.swift in Sources */,
 				033E9BD421EA6256006162CE /* Service.swift in Sources */,
 				033E9C0421EA8804006162CE /* ServiceResult.swift in Sources */,
 				032DAA9921ED2D8B00CC4F62 /* NoteResponse.swift in Sources */,
 				033E9BDD21EA7A0A006162CE /* NotesServiceType.swift in Sources */,
 				033E9C0A21EA94CA006162CE /* Note.swift in Sources */,
+				036A682B21EF1F51009C9F17 /* StoryBoarded.swift in Sources */,
+				036A682921EF1E26009C9F17 /* AppCoordinator.swift in Sources */,
 				033E9BD221E94F64006162CE /* ViewModel.swift in Sources */,
 				033AE26721E8AC2E001C7E9E /* AppDelegate.swift in Sources */,
 				033E9C0721EA8EB2006162CE /* JSONConvertible.swift in Sources */,
