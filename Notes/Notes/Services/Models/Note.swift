@@ -13,5 +13,11 @@ struct Note: Decodable, JSONConvertible {
     }
     
     let id: Int?
-    let title: String?
+    var title: String?
+}
+
+extension Note: Equatable {
+    static func == (lhs: Note, rhs: Note) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

@@ -8,10 +8,22 @@
 
 import RxCocoa
 
+protocol NoteViewModelCoordinatorDelegate: class {
+    func updateNote(_ note: Note)
+}
+
 class NoteViewModel: ViewModel {
-    let note = BehaviorRelay<Note?>(value: nil)
+    var note: Note
+    
+    weak var coordinatorDelegate: NoteViewModelCoordinatorDelegate?
     
     init(note: Note) {
-        self.note.accept(note)
+        self.note = note
+    }
+    
+    func updateNote(withText text: String?) {
+        note.title = text
+        
+        coordinatorDelegate?.updateNote(note)
     }
 }

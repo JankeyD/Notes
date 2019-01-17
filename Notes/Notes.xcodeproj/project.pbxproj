@@ -33,6 +33,8 @@
 		03B74C0721EE77A4004B63D4 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B74C0621EE77A4004B63D4 /* NotesViewModel.swift */; };
 		03B74C0921EE8141004B63D4 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B74C0821EE8141004B63D4 /* NoteCell.swift */; };
 		03C2890F21EFA418009D13F3 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2890E21EFA418009D13F3 /* NoteViewModel.swift */; };
+		03C2891121EFBF79009D13F3 /* NotesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2891021EFBF79009D13F3 /* NotesStorage.swift */; };
+		03C2891321EFD289009D13F3 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2891221EFD289009D13F3 /* ArrayExtension.swift */; };
 		03C2CA5621EBD99B00E8F9FA /* RequestProcedure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2CA5521EBD99B00E8F9FA /* RequestProcedure.swift */; };
 		03F3FB9221EF5F100074074B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3FB9121EF5F100074074B /* NoteViewController.swift */; };
 		C2E8FBF891A016FB8A35FA2E /* Pods_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97356ACF08FA0DA491647F48 /* Pods_Notes.framework */; };
@@ -81,6 +83,8 @@
 		03B74C0621EE77A4004B63D4 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		03B74C0821EE8141004B63D4 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		03C2890E21EFA418009D13F3 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		03C2891021EFBF79009D13F3 /* NotesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesStorage.swift; sourceTree = "<group>"; };
+		03C2891221EFD289009D13F3 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		03C2CA5521EBD99B00E8F9FA /* RequestProcedure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProcedure.swift; sourceTree = "<group>"; };
 		03F3FB9121EF5F100074074B /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		97356ACF08FA0DA491647F48 /* Pods_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +143,6 @@
 				033E9BCE21E94A55006162CE /* Core */,
 				033E9BD721EA77BC006162CE /* Services */,
 				033AE28921E8AE22001C7E9E /* View Models */,
-				033AE28821E8ADCE001C7E9E /* Extensions */,
 				033AE28621E8AD34001C7E9E /* Models */,
 				033AE28721E8AD34001C7E9E /* Views */,
 				033AE26A21E8AC2E001C7E9E /* Main.storyboard */,
@@ -162,6 +165,7 @@
 		033AE28621E8AD34001C7E9E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03C2891021EFBF79009D13F3 /* NotesStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +181,7 @@
 		033AE28821E8ADCE001C7E9E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				03C2891221EFD289009D13F3 /* ArrayExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				036A682C21EF297C009C9F17 /* Dependency Management */,
 				033E9C0521EA8E8B006162CE /* Protocols */,
 				033E9C0221EA87B3006162CE /* Service */,
+				033AE28821E8ADCE001C7E9E /* Extensions */,
 				033E9BCF21E94B17006162CE /* Dynamic.swift */,
 				033E9BD121E94F64006162CE /* ViewModel.swift */,
 			);
@@ -453,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				033E9BDB21EA79EB006162CE /* NotesService.swift in Sources */,
+				03C2891121EFBF79009D13F3 /* NotesStorage.swift in Sources */,
 				032DAA9721ED1B8900CC4F62 /* ErrorType.swift in Sources */,
 				033E9BD621EA6533006162CE /* ServiceLocator.swift in Sources */,
 				03B74C0921EE8141004B63D4 /* NoteCell.swift in Sources */,
@@ -476,6 +483,7 @@
 				033E9BD221E94F64006162CE /* ViewModel.swift in Sources */,
 				033AE26721E8AC2E001C7E9E /* AppDelegate.swift in Sources */,
 				033E9C0721EA8EB2006162CE /* JSONConvertible.swift in Sources */,
+				03C2891321EFD289009D13F3 /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

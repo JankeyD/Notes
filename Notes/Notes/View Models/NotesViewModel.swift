@@ -7,10 +7,9 @@
 //
 
 import RxCocoa
+import RxSwift
 
 class NotesViewModel: ViewModel {
-    let notes = BehaviorRelay<[Note]>(value: [])
-    
     /// All dependencies which have to be fulfilled to be able to operate.
     typealias Dependencies = HasNotesService
     
@@ -33,13 +32,40 @@ class NotesViewModel: ViewModel {
         let _ = _notesService.getNotes { response in
             if case .success(let noteResponse) = response {
                 if let notes = noteResponse?.notes {
-                    self.notes.accept(notes)
+                    NotesStorage.instance.store(notes)
                 }
             }
             
             if case .failure(let error) = response {
                 print(error)
             }
+        }
+    }
+    
+    private func updateNote(_ note: Note) {
+        
+    }
+    
+    private func createNote(_ note: Note) {
+        
+    }
+    
+    func handleNoteUpdate(_ note: Note) {
+        // Updates a note
+        if let id = note.id {
+            // Updates a local storage
+            NotesStorage.instance.update(note)
+            
+            // Updates a remote storage
+            
+            
+        // Create a new note
+        } else {
+            // Creates a new note localy
+            NotesStorage.instance.store(note)
+            
+            // Creates a new note remotely
+            
         }
     }
 }

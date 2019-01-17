@@ -7,32 +7,26 @@
 //
 
 import UIKit
-import RxSwift
 
 class NoteViewController: UIViewController, StoryBoarded {
     var viewModel: NoteViewModel?
     
-    let disposeBag = DisposeBag()
-    
     @IBOutlet weak var textView: UITextView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupNoteObserver()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        textView.becomeFirstResponder()
+        updateTextView()
     }
     
-    private func setupNoteObserver() {
-        viewModel?.note.asObservable()
-            .subscribe(onNext: { note in
-                self.textView.text = note?.title
-            })
-            .disposed(by: disposeBag)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        viewModel?.updateNote(withText: textView.text)
+    }
+    
+    private func updateTextView() {
+        textView.text = viewModel?.note.title
+        textView.becomeFirstResponder()
     }
 }

@@ -30,9 +30,7 @@ class NotesViewController: UIViewController, StoryBoarded {
     //MARK: Rx Setup
     
     private func setupCellConfiguration() {
-        guard let viewModel = self.viewModel else { return }
-
-        viewModel.notes.asObservable()
+        NotesStorage.instance.storage.asObservable()
             .bind(to: tableView
                 .rx
                 .items(cellIdentifier: NoteCell.identifier, cellType: NoteCell.self)) {
