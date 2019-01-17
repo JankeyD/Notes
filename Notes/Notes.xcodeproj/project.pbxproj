@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		032DAA9721ED1B8900CC4F62 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9621ED1B8900CC4F62 /* ErrorType.swift */; };
-		032DAA9921ED2D8B00CC4F62 /* NoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9821ED2D8B00CC4F62 /* NoteResponse.swift */; };
+		032DAA9921ED2D8B00CC4F62 /* NotesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9821ED2D8B00CC4F62 /* NotesResponse.swift */; };
 		032DAA9B21ED308C00CC4F62 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9A21ED308C00CC4F62 /* Endpoint.swift */; };
 		033AE26721E8AC2E001C7E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE26621E8AC2E001C7E9E /* AppDelegate.swift */; };
 		033AE26921E8AC2E001C7E9E /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE26821E8AC2E001C7E9E /* NotesViewController.swift */; };
@@ -52,7 +52,7 @@
 
 /* Begin PBXFileReference section */
 		032DAA9621ED1B8900CC4F62 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
-		032DAA9821ED2D8B00CC4F62 /* NoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteResponse.swift; sourceTree = "<group>"; };
+		032DAA9821ED2D8B00CC4F62 /* NotesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesResponse.swift; sourceTree = "<group>"; };
 		032DAA9A21ED308C00CC4F62 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		033AE26321E8AC2E001C7E9E /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033AE26621E8AC2E001C7E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				033E9C0921EA94CA006162CE /* Note.swift */,
-				032DAA9821ED2D8B00CC4F62 /* NoteResponse.swift */,
+				032DAA9821ED2D8B00CC4F62 /* NotesResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -474,7 +474,7 @@
 				036A682E21EF29A5009C9F17 /* ServiceDependencyContainer.swift in Sources */,
 				033E9BD421EA6256006162CE /* Service.swift in Sources */,
 				033E9C0421EA8804006162CE /* ServiceResult.swift in Sources */,
-				032DAA9921ED2D8B00CC4F62 /* NoteResponse.swift in Sources */,
+				032DAA9921ED2D8B00CC4F62 /* NotesResponse.swift in Sources */,
 				033E9BDD21EA7A0A006162CE /* NotesServiceType.swift in Sources */,
 				033E9C0A21EA94CA006162CE /* Note.swift in Sources */,
 				036A682B21EF1F51009C9F17 /* StoryBoarded.swift in Sources */,

@@ -43,29 +43,41 @@ class NotesViewModel: ViewModel {
     }
     
     private func updateNote(_ note: Note) {
-        
+        let _ = _notesService.updateNote(note) { response in
+            if case .success(let note) = response {
+                if let note = note {
+                    NotesStorage.instance.update(note)
+                }
+            }
+            
+            if case .failure(let error) = response {
+                print(error)
+            }
+        }
     }
     
     private func createNote(_ note: Note) {
-        
+        let _ = _notesService.createNote(note) { response in
+            if case .success(let note) = response {
+                if let note = note {
+                    NotesStorage.instance.store(note)
+                }
+            }
+            
+            if case .failure(let error) = response {
+                print(error)
+            }
+        }
     }
     
     func handleNoteUpdate(_ note: Note) {
         // Updates a note
-        if let id = note.id {
-            // Updates a local storage
-            NotesStorage.instance.update(note)
-            
-            // Updates a remote storage
-            
+        if let _ = note.id {
+            updateNote(note)
             
         // Create a new note
         } else {
-            // Creates a new note localy
-            NotesStorage.instance.store(note)
-            
-            // Creates a new note remotely
-            
+            createNote(note)
         }
     }
 }

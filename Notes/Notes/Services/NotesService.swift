@@ -14,17 +14,34 @@ class NotesService: Service, NotesServiceType {
     /// Used to store all service relevant endpoints.
     private enum Endpoints: Endpoint {
         case noteList
+        case createNote
+        case updateNote
         
         /// Returns the complete service URL.
         var url: URL {
             switch self {
-            case .noteList:
+            case .noteList, .createNote, .updateNote:
                 return URL(appendedWith: "notes")
             }
         }
     }
     
-    func getNotes(completion: @escaping (ServiceResult<NoteResponse>) -> Void) -> Procedure? {
+    func getNotes(completion: @escaping (ServiceResult<NotesResponse>) -> Void) -> Procedure? {
         return request(Endpoints.noteList.url, on: NotesService.queue, completion: completion)
+    }
+    
+    func createNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure? {
+       return request(Endpoints.createNote.url, parameters: note, on: NotesService.queue, completion: completion)
+    }
+    
+    func updateNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure? {
+        guard let id = note.id else {
+            completion(ServiceResult.failure(ErrorType.noResponse, nil))
+            return nil
+        }
+        
+        let url = Endpoints.updateNote.url.appendingPathComponent(String(id), isDirectory: false)
+        
+        return request(url, method: .put, parameters: note, on: NotesService.queue, completion: completion)
     }
 }

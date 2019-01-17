@@ -10,7 +10,7 @@ import ProcedureKit
 import Alamofire
 
 
-final class RequestProcedure<RequestType: Decodable>: Procedure {
+final class RequestProcedure<RequestType: Encodable>: Procedure {
     private let _URL: URL
     private let _data: RequestType
     private let _method: HTTPMethod
@@ -28,9 +28,19 @@ final class RequestProcedure<RequestType: Decodable>: Procedure {
         name = "NotesRequestProcedure"
     }
     
-    
+    /// Executes the procedure. This will actually convert the data (if available) via JSONEncoder and send the request.
     override func execute() {
-        guard let request = try? URLRequest(url: _URL, method: _method), !isCancelled else { return }
+        guard var request = try? URLRequest(url: _URL, method: _method, headers: ["Content-Type": "application/json"]), !isCancelled else { return }
+        
+        let jsonEncoder = JSONEncoder()
+        
+        guard let jsonData = try? jsonEncoder.encode(_data) else {
+            cancel()
+            
+            return
+        }
+        
+        request.httpBody = jsonData
         
         self.request = _sessionManager.request(request)
             .validate()
@@ -49,13 +59,11 @@ final class EmptyRequestProcedure: Procedure {
     private let _URL: URL
     private let _method: HTTPMethod
     
-    
     /// The actual request will be stored in here
     var request: DataRequest?
     
     /// The response of the service
     var response: DefaultDataResponse?
-    
     
     /// Used to create a new procedure to send a network request.
     ///
@@ -70,7 +78,6 @@ final class EmptyRequestProcedure: Procedure {
         
         name = "NotesRequestProcedure"
     }
-    
     
     /// Executes the procedure. This will actually convert the data (if available) via JSONEncoder and send the request.
     override func execute() {

@@ -10,5 +10,9 @@ import ProcedureKit
 
 protocol NotesServiceType {
     
-    @discardableResult func getNotes(completion: @escaping (ServiceResult<NoteResponse>) -> Void) -> Procedure?
+    @discardableResult func getNotes(completion: @escaping (ServiceResult<NotesResponse>) -> Void) -> Procedure?
+    
+    @discardableResult func createNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure?
+    
+    @discardableResult func updateNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure?
 }

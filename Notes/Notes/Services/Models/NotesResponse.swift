@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NoteResponse: Decodable, JSONConvertible {
+struct NotesResponse: Decodable, JSONConvertible {
     
     let notes: [Note]?
     

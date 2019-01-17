@@ -40,6 +40,52 @@ class Service {
         return requestProcedure
     }
     
+    /// Used to actually request the resource. This method will automatically enqueue the request and will give the response back via a completion handler.
+    /// **If the procedure is cancelled the completion closure will not be called.**
+    ///
+    /// - Parameters:
+    ///   - url: The URL which should be called.
+    ///   - method: The HTTP Method which should be used. Will default to `.post`
+    ///   - queue: The queue on which the request should be triggered.
+    ///   - parameters: The parameters which should be send to the server.
+    ///   - completion: The callback handler for the request.
+    /// - Returns: The procedure which can be cancelled which will also cancel the request.
+    func request<RequestType: Encodable, ResponseType>(_ url: URL, method: HTTPMethod = .post, parameters: RequestType, on queue: ProcedureQueue, completion: ((ServiceResult<ResponseType>) -> Void)? = nil) -> Procedure {
+        
+        let requestProcedure = RequestProcedure<RequestType>(url: url, data: parameters, method: method)
+        
+        requestProcedure.add(observer: NetworkObserver())
+        requestProcedure.add(observer: TimeoutObserver(by: ServiceSettings.timeout))
+        
+        requestProcedure.add(observer: BlockObserver(didCancel: { operation, _ in
+            (operation as? RequestProcedure<RequestType>)?.request?.cancel()
+            
+            if operation.errors.contains(where: { $0._code == 0 }) {
+                completion?(ServiceResult<ResponseType>.failure(ErrorType.noConnection, nil))
+            } else if operation.errors.contains(where: { $0._code == 1 }) {
+                completion?(ServiceResult<ResponseType>.failure(ErrorType.timeOut, nil))
+            }
+            
+            operation.finish()
+        }, willFinish: { procedure, _, _ in
+            // Handle cancellation.
+            if procedure.isCancelled { return }
+            
+            // Check for a response. No response? Something went wrong...
+            guard let response = (procedure as? RequestProcedure<RequestType>)?.response else {
+                completion?(ServiceResult<ResponseType>.failure(ErrorType.noResponse, nil))
+                
+                return
+            }
+            
+            completion?(self.handleResponse(response))
+        }))
+        
+        queue.addOperation(requestProcedure)
+        
+        return requestProcedure
+    }
+    
     /// Used to handle the actual response of the request.
     ///
     /// - Parameter response: The response which should be handled.

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-struct Note: Decodable, JSONConvertible {
+struct Note: Codable, JSONConvertible {
     enum CodingKeys: String, CodingKey {
         case id
         case title
