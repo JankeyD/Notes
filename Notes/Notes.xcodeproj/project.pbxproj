@@ -10,6 +10,7 @@
 		032DAA9721ED1B8900CC4F62 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9621ED1B8900CC4F62 /* ErrorType.swift */; };
 		032DAA9921ED2D8B00CC4F62 /* NotesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9821ED2D8B00CC4F62 /* NotesResponse.swift */; };
 		032DAA9B21ED308C00CC4F62 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9A21ED308C00CC4F62 /* Endpoint.swift */; };
+		033423C521F1C5A7009E7F22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 033423C721F1C5A7009E7F22 /* Localizable.strings */; };
 		033AE26721E8AC2E001C7E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE26621E8AC2E001C7E9E /* AppDelegate.swift */; };
 		033AE26921E8AC2E001C7E9E /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE26821E8AC2E001C7E9E /* NotesViewController.swift */; };
 		033AE26C21E8AC2E001C7E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033AE26A21E8AC2E001C7E9E /* Main.storyboard */; };
@@ -54,6 +55,10 @@
 		032DAA9621ED1B8900CC4F62 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		032DAA9821ED2D8B00CC4F62 /* NotesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesResponse.swift; sourceTree = "<group>"; };
 		032DAA9A21ED308C00CC4F62 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		033423C121F1C46A009E7F22 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
+		033423C221F1C46A009E7F22 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		033423C621F1C5A7009E7F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		033423C821F1C5AB009E7F22 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		033AE26321E8AC2E001C7E9E /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033AE26621E8AC2E001C7E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		033AE26821E8AC2E001C7E9E /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +154,7 @@
 				033AE26D21E8AC2F001C7E9E /* Assets.xcassets */,
 				033AE26F21E8AC2F001C7E9E /* LaunchScreen.storyboard */,
 				033AE27221E8AC2F001C7E9E /* Info.plist */,
+				033423C721F1C5A7009E7F22 /* Localizable.strings */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = 033AE25A21E8AC2E001C7E9E;
 			productRefGroup = 033AE26421E8AC2E001C7E9E /* Products */;
@@ -377,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				033AE27121E8AC2F001C7E9E /* LaunchScreen.storyboard in Resources */,
+				033423C521F1C5A7009E7F22 /* Localizable.strings in Resources */,
 				033AE26E21E8AC2F001C7E9E /* Assets.xcassets in Resources */,
 				033AE26C21E8AC2E001C7E9E /* Main.storyboard in Resources */,
 			);
@@ -500,10 +508,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		033423C721F1C5A7009E7F22 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				033423C621F1C5A7009E7F22 /* en */,
+				033423C821F1C5AB009E7F22 /* cs */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		033AE26A21E8AC2E001C7E9E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				033AE26B21E8AC2E001C7E9E /* Base */,
+				033423C121F1C46A009E7F22 /* cs */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -512,6 +530,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				033AE27021E8AC2F001C7E9E /* Base */,
+				033423C221F1C46A009E7F22 /* cs */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -523,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -583,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -640,7 +661,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Notes/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Laca.Notes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -655,7 +679,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Notes/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Laca.Notes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -670,7 +697,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NotesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Laca.NotesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -686,7 +717,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NotesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Laca.NotesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

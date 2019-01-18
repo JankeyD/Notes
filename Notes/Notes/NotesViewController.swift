@@ -14,11 +14,13 @@ class NotesViewController: UIViewController, StoryBoarded {
     weak var coordinator: AppCoordinator?
     
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet weak var headerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bindModel()
+        setupUI()
     }
     
     private func bindModel() {
@@ -37,6 +39,10 @@ class NotesViewController: UIViewController, StoryBoarded {
                 self?.tableView.reloadData()
             }
         }
+    }
+    
+    private func setupUI() {
+        headerLabel.text = NSLocalizedString("noteListHeader", comment: "The title of the note list")
     }
     
     @IBAction func createBarItemTouchUpInside(_ sender: UIBarButtonItem) {
