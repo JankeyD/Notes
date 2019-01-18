@@ -18,7 +18,7 @@ class NotesViewModel: ViewModel {
     var needsReloadData: Dynamic<Bool> = Dynamic(false)
     
     var notes: [Note] {
-        return NotesStorage.instance.storage.value
+        return NotesStorage.instance.storage
     }
     
     /// Default initializer which gets passed in all dependencies

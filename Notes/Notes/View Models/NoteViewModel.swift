@@ -6,7 +6,6 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-import RxCocoa
 
 protocol NoteViewModelCoordinatorDelegate: class {
     func updateNote(_ note: Note)
