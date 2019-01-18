@@ -8,9 +8,12 @@
 
 import UIKit
 
+
+/// `Coordinator` pattern protocol
 protocol Coordinator {
     var childCoordinators: [Coordinator] { get set }
     var navigationController: UINavigationController { get set }
     
+    /// Starts the coordinator.
     func start()
 }

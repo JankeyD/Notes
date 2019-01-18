@@ -12,7 +12,6 @@ class NotesViewModel: ViewModel {
     /// All dependencies which have to be fulfilled to be able to operate.
     typealias Dependencies = HasNotesService
     
-    /// Used to obtain the latest settings for the plugin.
     private let _notesService: NotesServiceType
     
     var needsReloadData: Dynamic<Bool> = Dynamic(false)

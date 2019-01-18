@@ -10,6 +10,7 @@ import ProcedureKit
 import Alamofire
 
 
+/// This class can be used to send a request with a JSON body.
 final class RequestProcedure<RequestType: Encodable>: Procedure {
     private let _URL: URL
     private let _data: RequestType
@@ -18,6 +19,12 @@ final class RequestProcedure<RequestType: Encodable>: Procedure {
     var request: DataRequest?
     var response: DefaultDataResponse?
     
+    /// Used to create a new procedure to send a network request.
+    ///
+    /// - Parameters:
+    ///   - URL: The URL which should be called
+    ///   - data: The attached data. Might be nil
+    ///   - method: The HTTP method.
     init(url: URL, data: RequestType, method: HTTPMethod) {
         _URL = url
         _data = data

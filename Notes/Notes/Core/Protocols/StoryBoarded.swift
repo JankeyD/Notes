@@ -8,9 +8,12 @@
 
 import UIKit
 
+/// Used to provide an instance from Storyboard base on ID
 protocol StoryBoarded {
     static func instantiate() -> Self
 }
+
+// MARK: - Default Implementation
 
 extension StoryBoarded where Self: UIViewController {
     static func instantiate() -> Self {

@@ -15,6 +15,16 @@ class Service {
         static var timeout: TimeInterval = 30
     }
     
+    
+    /// Used to actually request the resource. This method will automatically enqueue the request and will give the response back via a completion handler.
+    /// **If the procedure is cancelled the completion closure will not be called.**
+    ///
+    /// - Parameters:
+    ///   - url: The URL which should be called.
+    ///   - method: The HTTP Method which should be used. Will default to `.get`
+    ///   - queue: The queue on which the request should be triggered.
+    ///   - completion:  The callback handler for the request.
+    /// - Returns: The procedure which can be cancelled which will also cancel the request.
     func request<ResponseType>(_ url: URL, method: HTTPMethod = .get, on queue: ProcedureQueue, completion: ((ServiceResult<ResponseType>) -> Void)? = nil) -> Procedure {
         let requestProcedure = EmptyRequestProcedure(URL: url, method: method)
         
