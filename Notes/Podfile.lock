@@ -1,0 +1,17 @@
+PODS:
+  - Alamofire (4.8.1)
+  - ProcedureKit/Mobile (4.5.0):
+    - ProcedureKit/Standard
+  - ProcedureKit/Standard (4.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - ProcedureKit/Mobile (~> 4.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  ProcedureKit: 023e4600e921fe0b8d94f2d19ed680df83aa28ba
+
+PODFILE CHECKSUM: cf700f1252505c95f451d2b02ffff0a926f7d38f
+
+COCOAPODS: 1.4.0
