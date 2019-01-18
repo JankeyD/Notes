@@ -28,13 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         coordinator?.start()
         
-        UINavigationBar.appearance().tintColor = UIColor.orange
+        setupAppearance()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    private func setupAppearance() {
+        UINavigationBar.appearance().tintColor = UIColor.orange
+        UITableViewCell.appearance().backgroundColor = UIColor.clear
     }
 }
 

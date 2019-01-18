@@ -6,8 +6,7 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-import RxCocoa
-import RxSwift
+import Foundation
 
 class NotesViewModel: ViewModel {
     /// All dependencies which have to be fulfilled to be able to operate.
@@ -15,6 +14,12 @@ class NotesViewModel: ViewModel {
     
     /// Used to obtain the latest settings for the plugin.
     private let _notesService: NotesServiceType
+    
+    var needsReloadData: Dynamic<Bool> = Dynamic(false)
+    
+    var notes: [Note] {
+        return NotesStorage.instance.storage.value
+    }
     
     /// Default initializer which gets passed in all dependencies
     ///
@@ -29,44 +34,72 @@ class NotesViewModel: ViewModel {
     }
     
     func getNotes() {
-        let _ = _notesService.getNotes { response in
-            if case .success(let noteResponse) = response {
-                if let notes = noteResponse?.notes {
-                    NotesStorage.instance.store(notes)
+        state.value = .loading
+        
+        let _ = _notesService.getNotes { [weak self] response in
+            DispatchQueue.main.async(execute: {
+                if case .success(let noteResponse) = response {
+                    if let notes = noteResponse?.notes {
+                        NotesStorage.instance.store(notes)
+                        
+                        self?.state.value = .valid
+                    }
                 }
-            }
-            
-            if case .failure(let error) = response {
-                print(error)
-            }
+                
+                if case .failure(let error) = response {
+                    print(error)
+                    self?.state.value = .invalid
+                }
+            })
         }
     }
     
     private func updateNote(_ note: Note) {
-        let _ = _notesService.updateNote(note) { response in
-            if case .success(let note) = response {
-                if let note = note {
-                    NotesStorage.instance.update(note)
+        let _ = _notesService.updateNote(note) { [weak self] response in
+            DispatchQueue.main.async(execute: {
+                if case .success(let note) = response {
+                    if let note = note {
+                        NotesStorage.instance.update(note)
+                        self?.needsReloadData.value = true
+                    }
                 }
-            }
-            
-            if case .failure(let error) = response {
-                print(error)
-            }
+                
+                if case .failure(let error) = response {
+                    print(error)
+                }
+            })
         }
     }
     
     private func createNote(_ note: Note) {
-        let _ = _notesService.createNote(note) { response in
-            if case .success(let note) = response {
-                if let note = note {
-                    NotesStorage.instance.store(note)
+        let _ = _notesService.createNote(note) { [weak self] response in
+            DispatchQueue.main.async(execute: {
+                if case .success(let note) = response {
+                    if let note = note {
+                        NotesStorage.instance.store(note)
+                        self?.needsReloadData.value = true
+                    }
                 }
-            }
-            
-            if case .failure(let error) = response {
-                print(error)
-            }
+                
+                if case .failure(let error) = response {
+                    print(error)
+                }
+            })
+        }
+    }
+    
+    func deleteNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) {
+        let _ = _notesService.deleteNote(note) { response in
+            DispatchQueue.main.async(execute: {
+                if case .success = response {
+                    NotesStorage.instance.delete(note)
+                    completion(ServiceResult.success(nil))
+                }
+                
+                if case .failure(let error) = response {
+                    print(error)
+                }
+            })
         }
     }
     

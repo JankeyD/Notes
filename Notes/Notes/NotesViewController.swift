@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 class NotesViewController: UIViewController, StoryBoarded {
     var viewModel: NotesViewModel?
@@ -17,56 +15,75 @@ class NotesViewController: UIViewController, StoryBoarded {
     
     @IBOutlet private var tableView: UITableView!
     
-    let disposeBag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupCellConfiguration()
-        setupCellTapHandling()
-        setupRightBarButtonItem()
+        bindModel()
     }
     
-    //MARK: Rx Setup
-    
-    private func setupCellConfiguration() {
-        NotesStorage.instance.storage.asObservable()
-            .bind(to: tableView
-                .rx
-                .items(cellIdentifier: NoteCell.identifier, cellType: NoteCell.self)) {
-                    row, note, cell in
-                    cell.configure(withNote: note)
-                    
+    private func bindModel() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        
+        viewModel.state.bind { [weak self] state in
+            if state == .valid {
+                self?.tableView.reloadData()
             }
-            .disposed(by: disposeBag)
-    }
-    
-    private func setupCellTapHandling() {
-        tableView
-            .rx
-            .modelSelected(Note.self)
-            .subscribe(onNext: {
-                note in
-                self.coordinator?.showNoteDetail(with: note)
-                
-                if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
-                    self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
-                }
-            })
-            .disposed(by: disposeBag)
+        }
+        
+        viewModel.needsReloadData.bind { [weak self] needsRealodData in
+            if needsRealodData {
+                self?.tableView.reloadData()
+            }
+        }
     }
     
     @IBAction func createBarItemTouchUpInside(_ sender: UIBarButtonItem) {
         coordinator?.createNote()
     }
-    
-    @objc private func editBarButtonItemTouchUpInside() {
-        
+}
+
+extension NotesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.notes.count ?? 0
     }
     
-    private func setupRightBarButtonItem() {
-        let editItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editBarButtonItemTouchUpInside))
-        navigationItem.rightBarButtonItem = editItem
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell") as? NoteCell, let notes = viewModel?.notes  {
+            cell.configure(withNote: notes[indexPath.row])
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+}
+
+extension NotesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let notes = viewModel?.notes {
+            coordinator?.showNoteDetail(with: notes[indexPath.row])
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if let notes = viewModel?.notes {
+            viewModel?.deleteNote(notes[indexPath.row], completion: { result in
+                if case .success = result {
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+            })
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
     }
 }
 

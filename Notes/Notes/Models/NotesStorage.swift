@@ -32,6 +32,12 @@ class NotesStorage {
         storage.accept(currentNotes)
     }
     
+    func deleteNote(at index: Int) {
+        var currentNotes = storage.value
+        currentNotes.remove(at: index)
+        storage.accept(currentNotes)
+    }
+    
     func update(_ note: Note) {
         // Remove the note if title is empty
         guard note.title?.isEmpty == false else {

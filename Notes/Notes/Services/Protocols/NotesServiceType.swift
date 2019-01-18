@@ -15,4 +15,6 @@ protocol NotesServiceType {
     @discardableResult func createNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure?
     
     @discardableResult func updateNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure?
+    
+    @discardableResult func deleteNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure?
 }
