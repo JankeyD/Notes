@@ -9,6 +9,11 @@
 import UIKit
 import Core
 
+@UIApplicationMain
 class AppDelegate: ApplicationDelegate {
+    
+    override var coordinator: Coordinator? {
+        return AppCoordinator(navigationController: navController)
+    }
 }
 

@@ -1,22 +1,23 @@
 //
-//  AppDelegate.swift
-//  Notes
+//  ApplicationDelegate.swift
+//  Core
 //
-//  Created by Roman Lazan on 11.01.19.
+//  Created by Roman Lazan on 27.01.19.
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
 import UIKit
 
-public protocol ApplicationDelegate {
-    var coordinator: Coordinator? { get }
-}
-
-@UIApplicationMain
-public extension ApplicationDelegate: UIResponder, UIApplicationDelegate {
+open class ApplicationDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
-    let navController: UINavigationController = {
+    open var coordinator: Coordinator? {
+        get {
+            preconditionFailure("override this")
+        }
+    }
+    
+    public let navController: UINavigationController = {
         let navController = UINavigationController()
         navController.navigationBar.barTintColor = UIColor.groupTableViewBackground
         navController.view.backgroundColor = UIColor.groupTableViewBackground
@@ -24,8 +25,7 @@ public extension ApplicationDelegate: UIResponder, UIApplicationDelegate {
         return navController
     }()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        coordinator = AppCoordinator(navigationController: navController)
+    open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         coordinator?.start()
         

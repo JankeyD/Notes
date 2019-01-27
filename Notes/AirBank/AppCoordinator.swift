@@ -21,6 +21,11 @@ final class AppCoordinator: Coordinator {
     func start() {
         let vc = ListViewController.instantiate()
         vc.coordinator = self
+        vc.viewModel = TransactionsViewModel(dependencies: ServiceDependencyContainer())
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func showTransactionDetail() {
+        
     }
 }

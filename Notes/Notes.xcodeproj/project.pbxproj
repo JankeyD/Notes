@@ -48,10 +48,20 @@
 		03D45C0721FD9DF600B7A40C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0621FD9DF600B7A40C /* ListViewController.swift */; };
 		03D45C0921FD9E0E00B7A40C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0821FD9E0E00B7A40C /* DetailViewController.swift */; };
 		03D45C0B21FD9ED800B7A40C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0A21FD9ED800B7A40C /* AppCoordinator.swift */; };
-		03D45C0D21FD9FB800B7A40C /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0C21FD9FB800B7A40C /* ApplicationDelegate.swift */; };
 		03D45C0E21FE238100B7A40C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03032AC221FD84F900245FD3 /* Core.framework */; };
+		03D45C1021FE2A9E00B7A40C /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0F21FE2A9E00B7A40C /* ApplicationDelegate.swift */; };
+		03D45C1321FE373A00B7A40C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C1221FE373A00B7A40C /* Endpoint.swift */; };
+		03D45C1521FE39D500B7A40C /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C1421FE39D500B7A40C /* TransactionsService.swift */; };
+		03D45C1821FE3A5600B7A40C /* TransactionsServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C1721FE3A5600B7A40C /* TransactionsServiceType.swift */; };
+		03D45C1B21FE3C1300B7A40C /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C1A21FE3C1300B7A40C /* TransactionDetail.swift */; };
+		03D45C1D21FE437E00B7A40C /* TransactionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C1C21FE437E00B7A40C /* TransactionsResponse.swift */; };
+		03D45C2021FE468D00B7A40C /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C1F21FE468D00B7A40C /* TransactionsViewModel.swift */; };
+		03D45C2321FE47AD00B7A40C /* HasTransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C2221FE47AD00B7A40C /* HasTransactionsService.swift */; };
+		03D45C2521FE48BE00B7A40C /* ServiceDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C2421FE48BE00B7A40C /* ServiceDependencyContainer.swift */; };
+		03D45C2821FE553F00B7A40C /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C2721FE553F00B7A40C /* TransactionCell.swift */; };
 		03F3FB9221EF5F100074074B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3FB9121EF5F100074074B /* NoteViewController.swift */; };
 		0AD45FF1110C084091560818 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EB6404F65B8320B471D6FA /* Pods_Core.framework */; };
+		23EBDE38BE20506095F03AC0 /* Pods_AirBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CABF55485FD90CF1DD7A08D /* Pods_AirBank.framework */; };
 		C2E8FBF891A016FB8A35FA2E /* Pods_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97356ACF08FA0DA491647F48 /* Pods_Notes.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,13 +152,25 @@
 		03D45C0621FD9DF600B7A40C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		03D45C0821FD9E0E00B7A40C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		03D45C0A21FD9ED800B7A40C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		03D45C0C21FD9FB800B7A40C /* ApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
+		03D45C0F21FE2A9E00B7A40C /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
+		03D45C1221FE373A00B7A40C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		03D45C1421FE39D500B7A40C /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		03D45C1721FE3A5600B7A40C /* TransactionsServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsServiceType.swift; sourceTree = "<group>"; };
+		03D45C1A21FE3C1300B7A40C /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
+		03D45C1C21FE437E00B7A40C /* TransactionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsResponse.swift; sourceTree = "<group>"; };
+		03D45C1F21FE468D00B7A40C /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		03D45C2221FE47AD00B7A40C /* HasTransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasTransactionsService.swift; sourceTree = "<group>"; };
+		03D45C2421FE48BE00B7A40C /* ServiceDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDependencyContainer.swift; sourceTree = "<group>"; };
+		03D45C2721FE553F00B7A40C /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		03F3FB9121EF5F100074074B /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		3FEA7ABD9DAE493B2E8D9EA6 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
+		7CABF55485FD90CF1DD7A08D /* Pods_AirBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9159272EF0B61D70F23B07 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Pods/Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		97356ACF08FA0DA491647F48 /* Pods_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEFCB49C9FC1D4DDBF0E4D9 /* Pods-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Notes/Pods-Notes.release.xcconfig"; sourceTree = "<group>"; };
+		B5F446066D725F67B6C6FFDA /* Pods-AirBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirBank/Pods-AirBank.debug.xcconfig"; sourceTree = "<group>"; };
 		B8EB6404F65B8320B471D6FA /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E341A921D2830A4CEA24772C /* Pods-AirBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBank.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirBank/Pods-AirBank.release.xcconfig"; sourceTree = "<group>"; };
 		F2A5D815D8FE73338A37098D /* Pods-Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Notes/Pods-Notes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D45C0E21FE238100B7A40C /* Core.framework in Frameworks */,
+				23EBDE38BE20506095F03AC0 /* Pods_AirBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +214,7 @@
 		03032AC321FD84F900245FD3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				03D45C0C21FD9FB800B7A40C /* ApplicationDelegate.swift */,
+				03D45C0F21FE2A9E00B7A40C /* ApplicationDelegate.swift */,
 				03032AF121FD93F000245FD3 /* ViewModel.swift */,
 				03032AF221FD93F000245FD3 /* Dynamic.swift */,
 				03032AF321FD93F000245FD3 /* Extensions */,
@@ -237,6 +260,9 @@
 		03032AFD21FD9A2900245FD3 /* AirBank */ = {
 			isa = PBXGroup;
 			children = (
+				03D45C2621FE551F00B7A40C /* Views */,
+				03D45C1E21FE467400B7A40C /* View Models */,
+				03D45C1121FE371D00B7A40C /* Service */,
 				03032AFE21FD9A2900245FD3 /* AppDelegate.swift */,
 				03D45C0A21FD9ED800B7A40C /* AppCoordinator.swift */,
 				03D45C0621FD9DF600B7A40C /* ListViewController.swift */,
@@ -391,6 +417,52 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		03D45C1121FE371D00B7A40C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03D45C1921FE3BAB00B7A40C /* Models */,
+				03D45C1621FE3A4000B7A40C /* Protocols */,
+				03D45C1221FE373A00B7A40C /* Endpoint.swift */,
+				03D45C1421FE39D500B7A40C /* TransactionsService.swift */,
+				03D45C2421FE48BE00B7A40C /* ServiceDependencyContainer.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		03D45C1621FE3A4000B7A40C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				03D45C1721FE3A5600B7A40C /* TransactionsServiceType.swift */,
+				03D45C2221FE47AD00B7A40C /* HasTransactionsService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		03D45C1921FE3BAB00B7A40C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03D45C1A21FE3C1300B7A40C /* TransactionDetail.swift */,
+				03D45C1C21FE437E00B7A40C /* TransactionsResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03D45C1E21FE467400B7A40C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				03D45C1F21FE468D00B7A40C /* TransactionsViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		03D45C2621FE551F00B7A40C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03D45C2721FE553F00B7A40C /* TransactionCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		57A070F45C70685FC509B7BF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +470,8 @@
 				9CEFCB49C9FC1D4DDBF0E4D9 /* Pods-Notes.release.xcconfig */,
 				3FEA7ABD9DAE493B2E8D9EA6 /* Pods-Core.debug.xcconfig */,
 				7D9159272EF0B61D70F23B07 /* Pods-Core.release.xcconfig */,
+				B5F446066D725F67B6C6FFDA /* Pods-AirBank.debug.xcconfig */,
+				E341A921D2830A4CEA24772C /* Pods-AirBank.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -410,6 +484,7 @@
 				03032ACF21FD850200245FD3 /* Pods_Notes.framework */,
 				97356ACF08FA0DA491647F48 /* Pods_Notes.framework */,
 				B8EB6404F65B8320B471D6FA /* Pods_Core.framework */,
+				7CABF55485FD90CF1DD7A08D /* Pods_AirBank.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -452,9 +527,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03032B0B21FD9A2B00245FD3 /* Build configuration list for PBXNativeTarget "AirBank" */;
 			buildPhases = (
+				427DE70E4CCB053C0CA85945 /* [CP] Check Pods Manifest.lock */,
 				03032AF821FD9A2900245FD3 /* Sources */,
 				03032AF921FD9A2900245FD3 /* Frameworks */,
 				03032AFA21FD9A2900245FD3 /* Resources */,
+				C21F3B92E410C68447B0F350 /* [CP] Embed Pods Frameworks */,
+				9D24F964EF24641B4DB12C89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -609,6 +687,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		427DE70E4CCB053C0CA85945 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8511CF324274563D16F0D804 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -644,6 +740,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Notes/Pods-Notes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9D24F964EF24641B4DB12C89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirBank/Pods-AirBank-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BDB9328E2F82A376983F79D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -660,6 +771,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C21F3B92E410C68447B0F350 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AirBank/Pods-AirBank-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ProcedureKit/ProcedureKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProcedureKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirBank/Pods-AirBank-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E80F7A1F907F212202739C73 /* [CP] Copy Pods Resources */ = {
@@ -688,11 +819,11 @@
 				03032AEF21FD8D6800245FD3 /* Coordinator.swift in Sources */,
 				03032AF021FD8D6800245FD3 /* Endpoint.swift in Sources */,
 				03032AF721FD93F000245FD3 /* ArrayExtension.swift in Sources */,
+				03D45C1021FE2A9E00B7A40C /* ApplicationDelegate.swift in Sources */,
 				03032ADB21FD894300245FD3 /* ServiceLocator.swift in Sources */,
 				03032AED21FD8D6800245FD3 /* JSONConvertible.swift in Sources */,
 				03032AEE21FD8D6800245FD3 /* StoryBoarded.swift in Sources */,
 				03032AE721FD8CDF00245FD3 /* RequestProcedure.swift in Sources */,
-				03D45C0D21FD9FB800B7A40C /* ApplicationDelegate.swift in Sources */,
 				03032AF621FD93F000245FD3 /* Dynamic.swift in Sources */,
 				03032AE121FD8C8000245FD3 /* Service.swift in Sources */,
 				03032AE621FD8CDF00245FD3 /* ErrorType.swift in Sources */,
@@ -705,9 +836,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D45C0B21FD9ED800B7A40C /* AppCoordinator.swift in Sources */,
+				03D45C2021FE468D00B7A40C /* TransactionsViewModel.swift in Sources */,
 				03D45C0921FD9E0E00B7A40C /* DetailViewController.swift in Sources */,
+				03D45C2321FE47AD00B7A40C /* HasTransactionsService.swift in Sources */,
+				03D45C2521FE48BE00B7A40C /* ServiceDependencyContainer.swift in Sources */,
+				03D45C1B21FE3C1300B7A40C /* TransactionDetail.swift in Sources */,
 				03032AFF21FD9A2900245FD3 /* AppDelegate.swift in Sources */,
+				03D45C1821FE3A5600B7A40C /* TransactionsServiceType.swift in Sources */,
 				03D45C0721FD9DF600B7A40C /* ListViewController.swift in Sources */,
+				03D45C2821FE553F00B7A40C /* TransactionCell.swift in Sources */,
+				03D45C1D21FE437E00B7A40C /* TransactionsResponse.swift in Sources */,
+				03D45C1521FE39D500B7A40C /* TransactionsService.swift in Sources */,
+				03D45C1321FE373A00B7A40C /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,11 +1006,12 @@
 		};
 		03032B0C21FD9A2B00245FD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5F446066D725F67B6C6FFDA /* Pods-AirBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AirBank/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -879,18 +1020,19 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Laca.Notes.AirBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		03032B0D21FD9A2B00245FD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E341A921D2830A4CEA24772C /* Pods-AirBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AirBank/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -898,7 +1040,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Laca.Notes.AirBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
