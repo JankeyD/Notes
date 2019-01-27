@@ -14,3 +14,7 @@ end
 target 'Core' do
     shared_pods
 end
+
+target 'AirBank' do
+    shared_pods
+end

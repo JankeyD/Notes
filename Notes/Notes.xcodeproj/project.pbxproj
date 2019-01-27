@@ -22,6 +22,10 @@
 		03032AF521FD93F000245FD3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03032AF121FD93F000245FD3 /* ViewModel.swift */; };
 		03032AF621FD93F000245FD3 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03032AF221FD93F000245FD3 /* Dynamic.swift */; };
 		03032AF721FD93F000245FD3 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03032AF421FD93F000245FD3 /* ArrayExtension.swift */; };
+		03032AFF21FD9A2900245FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03032AFE21FD9A2900245FD3 /* AppDelegate.swift */; };
+		03032B0421FD9A2900245FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03032B0221FD9A2900245FD3 /* Main.storyboard */; };
+		03032B0621FD9A2B00245FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03032B0521FD9A2B00245FD3 /* Assets.xcassets */; };
+		03032B0921FD9A2B00245FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03032B0721FD9A2B00245FD3 /* LaunchScreen.storyboard */; };
 		032DAA9921ED2D8B00CC4F62 /* NotesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9821ED2D8B00CC4F62 /* NotesResponse.swift */; };
 		032DAA9B21ED308C00CC4F62 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DAA9A21ED308C00CC4F62 /* Endpoint.swift */; };
 		033423C521F1C5A7009E7F22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 033423C721F1C5A7009E7F22 /* Localizable.strings */; };
@@ -41,6 +45,11 @@
 		03B74C0921EE8141004B63D4 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B74C0821EE8141004B63D4 /* NoteCell.swift */; };
 		03C2890F21EFA418009D13F3 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2890E21EFA418009D13F3 /* NoteViewModel.swift */; };
 		03C2891121EFBF79009D13F3 /* NotesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2891021EFBF79009D13F3 /* NotesStorage.swift */; };
+		03D45C0721FD9DF600B7A40C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0621FD9DF600B7A40C /* ListViewController.swift */; };
+		03D45C0921FD9E0E00B7A40C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0821FD9E0E00B7A40C /* DetailViewController.swift */; };
+		03D45C0B21FD9ED800B7A40C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0A21FD9ED800B7A40C /* AppCoordinator.swift */; };
+		03D45C0D21FD9FB800B7A40C /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C0C21FD9FB800B7A40C /* ApplicationDelegate.swift */; };
+		03D45C0E21FE238100B7A40C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03032AC221FD84F900245FD3 /* Core.framework */; };
 		03F3FB9221EF5F100074074B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3FB9121EF5F100074074B /* NoteViewController.swift */; };
 		0AD45FF1110C084091560818 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EB6404F65B8320B471D6FA /* Pods_Core.framework */; };
 		C2E8FBF891A016FB8A35FA2E /* Pods_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97356ACF08FA0DA491647F48 /* Pods_Notes.framework */; };
@@ -96,6 +105,12 @@
 		03032AF121FD93F000245FD3 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		03032AF221FD93F000245FD3 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		03032AF421FD93F000245FD3 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		03032AFC21FD9A2900245FD3 /* AirBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03032AFE21FD9A2900245FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03032B0321FD9A2900245FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03032B0521FD9A2B00245FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03032B0821FD9A2B00245FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		03032B0A21FD9A2B00245FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		032DAA9821ED2D8B00CC4F62 /* NotesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesResponse.swift; sourceTree = "<group>"; };
 		032DAA9A21ED308C00CC4F62 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		033423C121F1C46A009E7F22 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
@@ -124,6 +139,10 @@
 		03B74C0821EE8141004B63D4 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		03C2890E21EFA418009D13F3 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		03C2891021EFBF79009D13F3 /* NotesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesStorage.swift; sourceTree = "<group>"; };
+		03D45C0621FD9DF600B7A40C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		03D45C0821FD9E0E00B7A40C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		03D45C0A21FD9ED800B7A40C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		03D45C0C21FD9FB800B7A40C /* ApplicationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 		03F3FB9121EF5F100074074B /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		3FEA7ABD9DAE493B2E8D9EA6 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		7D9159272EF0B61D70F23B07 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Pods/Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +158,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AD45FF1110C084091560818 /* Pods_Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03032AF921FD9A2900245FD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03D45C0E21FE238100B7A40C /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +191,7 @@
 		03032AC321FD84F900245FD3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				03D45C0C21FD9FB800B7A40C /* ApplicationDelegate.swift */,
 				03032AF121FD93F000245FD3 /* ViewModel.swift */,
 				03032AF221FD93F000245FD3 /* Dynamic.swift */,
 				03032AF321FD93F000245FD3 /* Extensions */,
@@ -206,12 +234,28 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		03032AFD21FD9A2900245FD3 /* AirBank */ = {
+			isa = PBXGroup;
+			children = (
+				03032AFE21FD9A2900245FD3 /* AppDelegate.swift */,
+				03D45C0A21FD9ED800B7A40C /* AppCoordinator.swift */,
+				03D45C0621FD9DF600B7A40C /* ListViewController.swift */,
+				03D45C0821FD9E0E00B7A40C /* DetailViewController.swift */,
+				03032B0221FD9A2900245FD3 /* Main.storyboard */,
+				03032B0521FD9A2B00245FD3 /* Assets.xcassets */,
+				03032B0721FD9A2B00245FD3 /* LaunchScreen.storyboard */,
+				03032B0A21FD9A2B00245FD3 /* Info.plist */,
+			);
+			path = AirBank;
+			sourceTree = "<group>";
+		};
 		033AE25A21E8AC2E001C7E9E = {
 			isa = PBXGroup;
 			children = (
+				03032AC321FD84F900245FD3 /* Core */,
+				03032AFD21FD9A2900245FD3 /* AirBank */,
 				033AE26521E8AC2E001C7E9E /* Notes */,
 				033AE27A21E8AC2F001C7E9E /* NotesTests */,
-				03032AC321FD84F900245FD3 /* Core */,
 				033AE26421E8AC2E001C7E9E /* Products */,
 				57A070F45C70685FC509B7BF /* Pods */,
 				846790DEA21D384B9736643E /* Frameworks */,
@@ -226,6 +270,7 @@
 				033AE26321E8AC2E001C7E9E /* Notes.app */,
 				033AE27721E8AC2F001C7E9E /* NotesTests.xctest */,
 				03032AC221FD84F900245FD3 /* Core.framework */,
+				03032AFC21FD9A2900245FD3 /* AirBank.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -403,6 +448,23 @@
 			productReference = 03032AC221FD84F900245FD3 /* Core.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		03032AFB21FD9A2900245FD3 /* AirBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03032B0B21FD9A2B00245FD3 /* Build configuration list for PBXNativeTarget "AirBank" */;
+			buildPhases = (
+				03032AF821FD9A2900245FD3 /* Sources */,
+				03032AF921FD9A2900245FD3 /* Frameworks */,
+				03032AFA21FD9A2900245FD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirBank;
+			productName = AirBank;
+			productReference = 03032AFC21FD9A2900245FD3 /* AirBank.app */;
+			productType = "com.apple.product-type.application";
+		};
 		033AE26221E8AC2E001C7E9E /* Notes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 033AE28021E8AC2F001C7E9E /* Build configuration list for PBXNativeTarget "Notes" */;
@@ -449,11 +511,14 @@
 		033AE25B21E8AC2E001C7E9E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Roman Lazan";
 				TargetAttributes = {
 					03032AC121FD84F900245FD3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					03032AFB21FD9A2900245FD3 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					033AE26221E8AC2E001C7E9E = {
@@ -482,6 +547,7 @@
 				033AE26221E8AC2E001C7E9E /* Notes */,
 				033AE27621E8AC2F001C7E9E /* NotesTests */,
 				03032AC121FD84F900245FD3 /* Core */,
+				03032AFB21FD9A2900245FD3 /* AirBank */,
 			);
 		};
 /* End PBXProject section */
@@ -491,6 +557,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03032AFA21FD9A2900245FD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03032B0921FD9A2B00245FD3 /* LaunchScreen.storyboard in Resources */,
+				03032B0621FD9A2B00245FD3 /* Assets.xcassets in Resources */,
+				03032B0421FD9A2900245FD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,10 +692,22 @@
 				03032AED21FD8D6800245FD3 /* JSONConvertible.swift in Sources */,
 				03032AEE21FD8D6800245FD3 /* StoryBoarded.swift in Sources */,
 				03032AE721FD8CDF00245FD3 /* RequestProcedure.swift in Sources */,
+				03D45C0D21FD9FB800B7A40C /* ApplicationDelegate.swift in Sources */,
 				03032AF621FD93F000245FD3 /* Dynamic.swift in Sources */,
 				03032AE121FD8C8000245FD3 /* Service.swift in Sources */,
 				03032AE621FD8CDF00245FD3 /* ErrorType.swift in Sources */,
 				03032AE321FD8CAA00245FD3 /* ServiceResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03032AF821FD9A2900245FD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03D45C0B21FD9ED800B7A40C /* AppCoordinator.swift in Sources */,
+				03D45C0921FD9E0E00B7A40C /* DetailViewController.swift in Sources */,
+				03032AFF21FD9A2900245FD3 /* AppDelegate.swift in Sources */,
+				03D45C0721FD9DF600B7A40C /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +757,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		03032B0221FD9A2900245FD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03032B0321FD9A2900245FD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		03032B0721FD9A2B00245FD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03032B0821FD9A2B00245FD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		033423C721F1C5A7009E7F22 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -757,6 +861,45 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		03032B0C21FD9A2B00245FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirBank/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Laca.Notes.AirBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03032B0D21FD9A2B00245FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirBank/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Laca.Notes.AirBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -962,6 +1105,15 @@
 			buildConfigurations = (
 				03032ACB21FD84F900245FD3 /* Debug */,
 				03032ACC21FD84F900245FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03032B0B21FD9A2B00245FD3 /* Build configuration list for PBXNativeTarget "AirBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03032B0C21FD9A2B00245FD3 /* Debug */,
+				03032B0D21FD9A2B00245FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
