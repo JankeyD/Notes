@@ -16,9 +16,18 @@ struct TransactionsResponse: Decodable, JSONConvertible {
     let items: [TransactionItem]?
 }
 
-enum Direction: String {
+enum Direction: String, Decodable {
     case outgoing = "OUTGOING"
     case incoming = "INCOMING"
+    
+    var description: String {
+        switch self {
+        case .outgoing:
+            return "outgoing"
+        case .incoming:
+            return "incoming"
+        }
+    }
 }
 
 struct TransactionItem: Decodable, JSONConvertible {
@@ -30,6 +39,6 @@ struct TransactionItem: Decodable, JSONConvertible {
     
     var id: Int?
     var amountInAccountCurrency: Int?
-    var direction: String?
+    var direction: Direction?
 }
 

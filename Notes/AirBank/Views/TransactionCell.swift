@@ -11,11 +11,9 @@ import UIKit
 class TransactionCell: UITableViewCell {
     static let identifier = "TransactionCell"
     
-//    @IBOutlet private var title: UILabel!
-//    @IBOutlet private var subTitle: UILabel!
-    
     func configure(withTransaction transaction: TransactionItem) {
-        textLabel?.text = String(transaction.amountInAccountCurrency ?? 0) + " Kc"
-        detailTextLabel?.text = transaction.direction
+        guard let amount = transaction.amountInAccountCurrency, let direction = transaction.direction else { return }
+        textLabel?.text = String(amount) + " Kc"
+        detailTextLabel?.text = direction.description
     }
 }
