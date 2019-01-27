@@ -6,7 +6,7 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-enum ServiceLocator {
+public enum ServiceLocator {
     typealias Recipe = () -> Any
     
     fileprivate static var registry: Dictionary<String, Recipe> = [:]
@@ -15,17 +15,17 @@ enum ServiceLocator {
         return (some is Any.Type) ? "\(some)" : "\(type(of: some))"
     }
     
-    static func addService<T>(recipe: @escaping () -> T) {
+    public static func addService<T>(recipe: @escaping () -> T) {
         let key = typeName(some: T.self)
         registry[key] = recipe
     }
     
-    static func locateService<T>() -> T? {
+    public static func locateService<T>() -> T? {
         let key = typeName(some: T.self)
         return registry[key]?() as? T
     }
     
-    static func removeService<T>() -> T? {
+    public static func removeService<T>() -> T? {
         let key = typeName(some: T.self)
         return registry.removeValue(forKey: key)?() as? T
     }

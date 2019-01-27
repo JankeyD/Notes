@@ -6,7 +6,7 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-import Foundation
+import Core
 
 struct NotesResponse: Decodable, JSONConvertible {
     

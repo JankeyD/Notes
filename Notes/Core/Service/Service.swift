@@ -9,11 +9,13 @@
 import Alamofire
 import ProcedureKit
 
-class Service {
+open class Service {
     
     private enum ServiceSettings {
         static var timeout: TimeInterval = 30
     }
+    
+    public init() {}
     
     
     /// Used to actually request the resource. This method will automatically enqueue the request and will give the response back via a completion handler.
@@ -25,7 +27,7 @@ class Service {
     ///   - queue: The queue on which the request should be triggered.
     ///   - completion:  The callback handler for the request.
     /// - Returns: The procedure which can be cancelled which will also cancel the request.
-    func request<ResponseType>(_ url: URL, method: HTTPMethod = .get, on queue: ProcedureQueue, completion: ((ServiceResult<ResponseType>) -> Void)? = nil) -> Procedure {
+    public func request<ResponseType>(_ url: URL, method: HTTPMethod = .get, on queue: ProcedureQueue, completion: ((ServiceResult<ResponseType>) -> Void)? = nil) -> Procedure {
         let requestProcedure = EmptyRequestProcedure(URL: url, method: method)
         
         requestProcedure.add(observer: NetworkObserver())
@@ -60,7 +62,7 @@ class Service {
     ///   - parameters: The parameters which should be send to the server.
     ///   - completion: The callback handler for the request.
     /// - Returns: The procedure which can be cancelled which will also cancel the request.
-    func request<RequestType: Encodable, ResponseType>(_ url: URL, method: HTTPMethod = .post, parameters: RequestType, on queue: ProcedureQueue, completion: ((ServiceResult<ResponseType>) -> Void)? = nil) -> Procedure {
+    public func request<RequestType: Encodable, ResponseType>(_ url: URL, method: HTTPMethod = .post, parameters: RequestType, on queue: ProcedureQueue, completion: ((ServiceResult<ResponseType>) -> Void)? = nil) -> Procedure {
         
         let requestProcedure = RequestProcedure<RequestType>(url: url, data: parameters, method: method)
         

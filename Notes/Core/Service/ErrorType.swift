@@ -6,7 +6,7 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-enum ErrorType: String, Error {
+public enum ErrorType: String, Error {
     case noConnection
     case noResponse
     case timeOut

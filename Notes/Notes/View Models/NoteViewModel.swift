@@ -6,6 +6,7 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
+import Core
 
 protocol NoteViewModelCoordinatorDelegate: class {
     func updateNote(_ note: Note)

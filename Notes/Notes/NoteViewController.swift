@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Core
 
 class NoteViewController: UIViewController, StoryBoarded {
     var viewModel: NoteViewModel?

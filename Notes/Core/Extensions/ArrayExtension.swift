@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array {
+public extension Array {
     mutating func remove<T>(_ obj: T) where T : Equatable {
         self = self.filter({$0 as? T != obj})
     }

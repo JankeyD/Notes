@@ -6,6 +6,7 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
+import Core
 import ProcedureKit
 
 protocol NotesServiceType {
