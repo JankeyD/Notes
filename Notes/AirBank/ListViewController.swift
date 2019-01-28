@@ -12,7 +12,7 @@ import Core
 class ListViewController: UIViewController, StoryBoarded {
     var viewModel: TransactionsViewModel?
     
-    weak var coordinator: AppCoordinator?
+    var coordinator: AppCoordinator?
     
     @IBOutlet private var tableView: UITableView!
     
@@ -57,7 +57,7 @@ extension ListViewController: UITableViewDataSource {
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let transactions = viewModel?.transactionList {
-            //coordinator?.showTransactionDetail(with: transactions[indexPath.row])
+            coordinator?.showTransactionDetail(with: transactions[indexPath.row])
         }
         
         tableView.deselectRow(at: indexPath, animated: true)

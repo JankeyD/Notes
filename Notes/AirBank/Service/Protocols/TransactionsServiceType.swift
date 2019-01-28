@@ -13,5 +13,5 @@ protocol TransactionsServiceType {
     
     @discardableResult func getTransactionList(completion: @escaping (ServiceResult<TransactionsResponse>) -> Void) -> Procedure?
     
-   // @discardableResult func getTransactionDetail(_ note: TransactionDetail, completion: @escaping (ServiceResult<TransactionDetail>) -> Void) -> Procedure?
+    @discardableResult func getTransactionDetail(withTransactionID id: Int, completion: @escaping (ServiceResult<TransactionDetailResponse>) -> Void) -> Procedure?
 }

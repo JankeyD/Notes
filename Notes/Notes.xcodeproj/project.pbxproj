@@ -59,6 +59,10 @@
 		03D45C2321FE47AD00B7A40C /* HasTransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C2221FE47AD00B7A40C /* HasTransactionsService.swift */; };
 		03D45C2521FE48BE00B7A40C /* ServiceDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C2421FE48BE00B7A40C /* ServiceDependencyContainer.swift */; };
 		03D45C2821FE553F00B7A40C /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C2721FE553F00B7A40C /* TransactionCell.swift */; };
+		03D45C2A21FEC5D500B7A40C /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C2921FEC5D500B7A40C /* TransactionDetailViewModel.swift */; };
+		03D45C2C21FEC78600B7A40C /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C2B21FEC78600B7A40C /* TransactionDetailView.swift */; };
+		03D45C2E21FEC7A100B7A40C /* TransactionDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D45C2D21FEC7A100B7A40C /* TransactionDetailView.xib */; };
+		03D45C3221FEF8DE00B7A40C /* TransactionDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D45C3121FEF8DE00B7A40C /* TransactionDetailResponse.swift */; };
 		03F3FB9221EF5F100074074B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3FB9121EF5F100074074B /* NoteViewController.swift */; };
 		0AD45FF1110C084091560818 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EB6404F65B8320B471D6FA /* Pods_Core.framework */; };
 		23EBDE38BE20506095F03AC0 /* Pods_AirBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CABF55485FD90CF1DD7A08D /* Pods_AirBank.framework */; };
@@ -162,6 +166,10 @@
 		03D45C2221FE47AD00B7A40C /* HasTransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasTransactionsService.swift; sourceTree = "<group>"; };
 		03D45C2421FE48BE00B7A40C /* ServiceDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDependencyContainer.swift; sourceTree = "<group>"; };
 		03D45C2721FE553F00B7A40C /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		03D45C2921FEC5D500B7A40C /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		03D45C2B21FEC78600B7A40C /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		03D45C2D21FEC7A100B7A40C /* TransactionDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionDetailView.xib; sourceTree = "<group>"; };
+		03D45C3121FEF8DE00B7A40C /* TransactionDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailResponse.swift; sourceTree = "<group>"; };
 		03F3FB9121EF5F100074074B /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		3FEA7ABD9DAE493B2E8D9EA6 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		7CABF55485FD90CF1DD7A08D /* Pods_AirBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -443,6 +451,7 @@
 			children = (
 				03D45C1A21FE3C1300B7A40C /* TransactionDetail.swift */,
 				03D45C1C21FE437E00B7A40C /* TransactionsResponse.swift */,
+				03D45C3121FEF8DE00B7A40C /* TransactionDetailResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				03D45C1F21FE468D00B7A40C /* TransactionsViewModel.swift */,
+				03D45C2921FEC5D500B7A40C /* TransactionDetailViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -459,6 +469,8 @@
 			isa = PBXGroup;
 			children = (
 				03D45C2721FE553F00B7A40C /* TransactionCell.swift */,
+				03D45C2B21FEC78600B7A40C /* TransactionDetailView.swift */,
+				03D45C2D21FEC7A100B7A40C /* TransactionDetailView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -644,6 +656,7 @@
 			files = (
 				03032B0921FD9A2B00245FD3 /* LaunchScreen.storyboard in Resources */,
 				03032B0621FD9A2B00245FD3 /* Assets.xcassets in Resources */,
+				03D45C2E21FEC7A100B7A40C /* TransactionDetailView.xib in Resources */,
 				03032B0421FD9A2900245FD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -837,10 +850,12 @@
 			files = (
 				03D45C0B21FD9ED800B7A40C /* AppCoordinator.swift in Sources */,
 				03D45C2021FE468D00B7A40C /* TransactionsViewModel.swift in Sources */,
+				03D45C3221FEF8DE00B7A40C /* TransactionDetailResponse.swift in Sources */,
 				03D45C0921FD9E0E00B7A40C /* DetailViewController.swift in Sources */,
 				03D45C2321FE47AD00B7A40C /* HasTransactionsService.swift in Sources */,
 				03D45C2521FE48BE00B7A40C /* ServiceDependencyContainer.swift in Sources */,
 				03D45C1B21FE3C1300B7A40C /* TransactionDetail.swift in Sources */,
+				03D45C2C21FEC78600B7A40C /* TransactionDetailView.swift in Sources */,
 				03032AFF21FD9A2900245FD3 /* AppDelegate.swift in Sources */,
 				03D45C1821FE3A5600B7A40C /* TransactionsServiceType.swift in Sources */,
 				03D45C0721FD9DF600B7A40C /* ListViewController.swift in Sources */,
@@ -848,6 +863,7 @@
 				03D45C1D21FE437E00B7A40C /* TransactionsResponse.swift in Sources */,
 				03D45C1521FE39D500B7A40C /* TransactionsService.swift in Sources */,
 				03D45C1321FE373A00B7A40C /* Endpoint.swift in Sources */,
+				03D45C2A21FEC5D500B7A40C /* TransactionDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

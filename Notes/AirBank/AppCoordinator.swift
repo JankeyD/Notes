@@ -25,7 +25,10 @@ final class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func showTransactionDetail() {
-        
+    func showTransactionDetail(with transaction: TransactionItem) {
+        let vc = DetailViewController.instantiate()
+        let viewModel = TransactionDetailViewModel(dependencies: ServiceDependencyContainer(), transaction: transaction)
+        vc.viewModel = viewModel
+        navigationController.pushViewController(vc, animated: true)
     }
 }

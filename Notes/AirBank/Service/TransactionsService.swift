@@ -31,16 +31,9 @@ class TransactionsService: Service, TransactionsServiceType {
         return request(Endpoints.transactionList.url, on: TransactionsService.queue, completion: completion)
     }
     
-//    func getTransactionDetail(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure? {
-//        return request(Endpoints.noteList.url, on: NotesService.queue, completion: completion)
-//    }
-//
-//    func getNotes(completion: @escaping (ServiceResult<NotesResponse>) -> Void) -> Procedure? {
-//        return request(Endpoints.noteList.url, on: NotesService.queue, completion: completion)
-//    }
-//
-//    func createNote(_ note: Note, completion: @escaping (ServiceResult<Note>) -> Void) -> Procedure? {
-//        return request(Endpoints.createNote.url, parameters: note, on: NotesService.queue, completion: completion)
-//    }
+    func getTransactionDetail(withTransactionID id: Int, completion: @escaping (ServiceResult<TransactionDetailResponse>) -> Void) -> Procedure? {
+        let url = Endpoints.transactionDetail.url.appendingPathComponent(String(id), isDirectory: false)
+        return request(url, on: TransactionsService.queue, completion: completion)
+    }
 }
 
