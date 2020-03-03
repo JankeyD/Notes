@@ -72,9 +72,9 @@ open class Service {
         requestProcedure.add(observer: BlockObserver(didCancel: { operation, _ in
             (operation as? RequestProcedure<RequestType>)?.request?.cancel()
             
-            if operation.errors.contains(where: { $0._code == 0 }) {
+            if operation.error?._code == 0 {
                 completion?(ServiceResult<ResponseType>.failure(ErrorType.noConnection, nil))
-            } else if operation.errors.contains(where: { $0._code == 1 }) {
+            } else if operation.error?._code == 1 {
                 completion?(ServiceResult<ResponseType>.failure(ErrorType.timeOut, nil))
             }
             
