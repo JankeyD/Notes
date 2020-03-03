@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol JSONConvertible {
+public protocol JSONConvertible {
     
     /// Failable initializer which takes `Data` as the input to transform it to a proper instance.
     ///
@@ -16,7 +16,7 @@ protocol JSONConvertible {
     init?(JSON: Data)
 }
 
-extension JSONConvertible where Self: Decodable {
+public extension JSONConvertible where Self: Decodable {
     init?(JSON: Data) {
         do {
             self = try JSONDecoder().decode(Self.self, from: JSON)

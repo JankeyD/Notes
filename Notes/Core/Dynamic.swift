@@ -6,27 +6,27 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-class Dynamic<T> {
-    typealias Listener = (T)->()
+public class Dynamic<T> {
+    public typealias Listener = (T)->()
     
-    var listener: Listener?
+    private var listener: Listener?
     
-    var value:T {
+    public var value:T {
         didSet {
             listener?(value)
         }
     }
     
-    init(_ value: T) {
+    public init(_ value: T) {
         self.value = value
     }
     
-    func bind(listener: Listener?) {
+    public func bind(listener: Listener?) {
         self.listener = listener
         listener?(value)
     }
     
-    func unbind() {
+    public func unbind() {
         listener = nil
     }
 }

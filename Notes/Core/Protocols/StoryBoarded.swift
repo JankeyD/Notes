@@ -9,14 +9,14 @@
 import UIKit
 
 /// Used to provide an instance from Storyboard base on ID
-protocol StoryBoarded {
+public protocol StoryBoarded {
     static func instantiate() -> Self
 }
 
 // MARK: - Default Implementation
 
 extension StoryBoarded where Self: UIViewController {
-    static func instantiate() -> Self {
+    public static func instantiate() -> Self {
         let fullName = NSStringFromClass(self)
         
         let className = fullName.components(separatedBy: ".")[1]

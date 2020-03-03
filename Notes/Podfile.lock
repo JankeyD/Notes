@@ -1,17 +1,22 @@
 PODS:
-  - Alamofire (4.8.1)
-  - ProcedureKit/Mobile (4.5.0):
+  - Alamofire (4.9.1)
+  - ProcedureKit/Mobile (5.2.0):
     - ProcedureKit/Standard
-  - ProcedureKit/Standard (4.5.0)
+  - ProcedureKit/Standard (5.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
-  - ProcedureKit/Mobile (~> 4.0)
+  - ProcedureKit/Mobile
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - ProcedureKit
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  ProcedureKit: 023e4600e921fe0b8d94f2d19ed680df83aa28ba
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ProcedureKit: deafeab083a0c5e45e4b02379e0ffa316d03db29
 
-PODFILE CHECKSUM: cf700f1252505c95f451d2b02ffff0a926f7d38f
+PODFILE CHECKSUM: 5e2b279f3df995eea53cd3712f106d168c730155
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.8.4

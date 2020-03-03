@@ -6,6 +6,8 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
+import Core
+
 struct Note: Codable, JSONConvertible {
     enum CodingKeys: String, CodingKey {
         case id

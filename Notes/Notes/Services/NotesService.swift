@@ -7,6 +7,7 @@
 //
 
 import ProcedureKit
+import Core
 
 class NotesService: Service, NotesServiceType {
     private static let queue = ProcedureQueue()

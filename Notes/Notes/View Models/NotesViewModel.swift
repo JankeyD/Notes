@@ -6,7 +6,7 @@
 //  Copyright © 2019 Roman Lazan. All rights reserved.
 //
 
-import Foundation
+import Core
 
 class NotesViewModel: ViewModel {
     /// All dependencies which have to be fulfilled to be able to operate.
